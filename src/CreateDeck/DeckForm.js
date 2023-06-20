@@ -5,14 +5,14 @@ function DeckForm({
   submitHandler,
   altButtonHandler,
 }) {
-  const formRef = useRef(null);
+  // const formRef = useRef(null);
   //need to copy over form ref stuff from card form to auto scroll
   const [formData, setFormData] = useState(initialFormData);
-  useEffect(() => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (formRef.current) {
+  //     formRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, []);
   function handleInput(event) {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   }
@@ -21,7 +21,7 @@ function DeckForm({
     submitHandler(formData);
   }
   return (
-    <form className="container mb-3" ref={formRef}>
+    <form className="container mb-3">
       <div className="card">
         <div className="card-header">
           <h1>{header}</h1>

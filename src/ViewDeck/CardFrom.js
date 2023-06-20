@@ -7,13 +7,13 @@ function CardForm({
   altButtonText,
   submitHandler,
 }) {
-  const formRef = useRef(null);
+  // const formRef = useRef(null);
   const [formData, setFormData] = useState(initialFormData);
-  useEffect(() => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (formRef.current) {
+  //     formRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, []);
 
   console.log(initialFormData);
 
@@ -26,7 +26,7 @@ function CardForm({
     setFormData(initialFormData);
   }
   return (
-    <div className="card mb-4" ref={formRef}>
+    <div className="card mb-4">
       <form onSubmit={handleFormSubmit}>
         <div className="card-header">
           <h1>{header}</h1>

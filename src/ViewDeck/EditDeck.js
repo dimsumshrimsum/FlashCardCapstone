@@ -46,6 +46,7 @@ function EditDeck({ deckId, handleChangeToDeck }) {
   async function editDeck(deck) {
     await updateDeck(deck);
     handleChangeToDeck();
+    history.push(`/decks/${deckId}`);
   }
 
   function handleCancelButtonClick() {

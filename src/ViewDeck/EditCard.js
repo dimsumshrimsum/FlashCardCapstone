@@ -47,8 +47,7 @@ function EditCard({ deckId, deck, handleChangeToCards }) {
   }, [card]);
 
   async function editCard(card) {
-    const response = await updateCard(card);
-
+    await updateCard(card);
     handleChangeToCards();
     history.push(`/decks/${deckId}`);
   }
